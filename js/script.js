@@ -1,19 +1,4 @@
 
-
-var typed = new Typed(".typing", {
-  strings: [
-    "",
-    "Web",
-    "Web Designer",
-    "Web Developer",
-    "Graphic Designer",
-    "Content Creator",
-  ],
-  typeSpeed: 100,
-  BackSpeed: 60,
-  loop: true,
-});
-
 const nav = document.querySelector(".nav"),
   navList = nav.querySelectorAll("li"),
   totalNavList = navList.length,
@@ -33,6 +18,9 @@ for (let i = 0; i < totalNavList; i++) {
       navList[j].querySelector("a").classList.remove("active");
     }
     this.classList.add("active");
+    
+    showSection(this);
+    
     if (window.innerWidth < 1200) {
       asideSectionTogglerBtn();
     }
